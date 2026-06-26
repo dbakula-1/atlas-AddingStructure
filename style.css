@@ -53,10 +53,26 @@ p, li {
   line-height: 1.5;
 }
 
+/* || main container */
+
+.flex-container {
+  background-color: rgba(0, 255, 0, 0.5);
+  padding: 1%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* This fixes the layout issue */
+.flex-container > header,
+.flex-container > main,
+.flex-container > footer {
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
 /* || header layout */
 
 header {
-  flex: 100%;
   margin-bottom: 10px;
   display: flex;
   flex-flow: row wrap;
@@ -105,7 +121,6 @@ nav a, nav span {
 /* || main layout */
 
 main {
-  flex: 100%;
   display: flex;
 }
 
@@ -132,13 +147,5 @@ aside img {
 }
 
 footer {
-  flex: 100%;
   margin-top: 10px;
-}
-
-.flex-container {
-  background-color: rgba(0, 255, 0, 0.5);
-  padding: 1%;
-  display: flex;
-  flex-wrap: wrap;
 }
